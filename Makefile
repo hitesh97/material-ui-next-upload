@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := all
 
-name    := material-ui-upload
+name    := material-ui-next-upload
 modules := ./node_modules
 bin     := $(modules)/.bin
 src     := ./src

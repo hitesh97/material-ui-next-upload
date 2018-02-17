@@ -1,19 +1,19 @@
 // *-* mode: rjsx -*-
-import React, {Component} from 'react';
+import React from 'react';
 import propTypes from 'prop-types';
 import {findDOMNode} from 'react-dom';
-import FlatButton from 'material-ui/FlatButton';
+import Button from 'material-ui/Button';
 import {filter, assign} from 'lodash';
 
 import styles from './index.css';
 
 
-export default class Upload extends Component {
+export default class Upload extends React.Component {
 
     static defaultProps = {
         fileTypeRegex: /.*/,
         onFileLoad: (e) => undefined,
-        buttonControl: FlatButton
+        buttonControl: Button
     };
 
     static propTypes = {
@@ -78,25 +78,25 @@ export default class Upload extends Component {
     render() {
         return (
             <div className={styles.Container}>
-              {
-                  React.createElement(
-                      this.props.buttonControl,
-                      assign(
-                          {
-                              containerElement: 'label'
-                          },
-                          this.getButtonProps()
-                      ),
-                      (
-                          <input
-                              className={styles.FileInput}
-                              type="file"
-                              ref="file-input"
-                              multiple
-                              />
-                      )
-                  )
-              }
+                {
+                    React.createElement(
+                        this.props.buttonControl,
+                        assign(
+                            {
+                                containerElement: 'label'
+                            },
+                            this.getButtonProps()
+                        ),
+                        (
+                            <input
+                                className={styles.FileInput}
+                                type="file"
+                                ref="file-input"
+                                multiple
+                            />
+                        )
+                    )
+                }
             </div>
         );
     };

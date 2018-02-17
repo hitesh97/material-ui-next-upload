@@ -1,23 +1,14 @@
 // -*- mode: rjsx -*-
 import React from 'react';
 
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
-
 import {storiesOf} from '@storybook/react';
 import {action} from '@storybook/addon-actions';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from 'material-ui/Button'
 import Upload from 'material-ui-upload/Upload';
 import UploadPreview from 'material-ui-upload/UploadPreview';
 
-let theme = (v) => (
-    <MuiThemeProvider muiTheme={getMuiTheme()}>
-      {v}
-    </MuiThemeProvider>
-);
+let theme = (v) => ({v});
 
 storiesOf('Upload', module)
     .add(
@@ -35,7 +26,7 @@ storiesOf('Upload', module)
             <Upload
               label="Add"
               onFileLoad={action('onFileLoad')}
-              buttonControl={RaisedButton}
+              buttonControl={Button}
               />
         )
     )
