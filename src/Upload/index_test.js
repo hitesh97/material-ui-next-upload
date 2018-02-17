@@ -2,10 +2,7 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import {assert} from 'chai';
-import PropTypes from 'prop-types';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Upload from './index';
-
 
 const mountWithTheme = (node) => mount(node);
 
