@@ -4,9 +4,7 @@ import propTypes from 'prop-types';
 import {findDOMNode} from 'react-dom';
 import Button from 'material-ui/Button';
 import {filter, assign} from 'lodash';
-
 import styles from './index.css';
-
 
 export default class Upload extends React.Component {
 
@@ -100,5 +98,4 @@ export default class Upload extends React.Component {
             </div>
         );
     };
-
 }
